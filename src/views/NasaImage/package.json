@@ -1,0 +1,6 @@
+{
+  "name": "Nasa Image",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./NasaImage.js"
+}

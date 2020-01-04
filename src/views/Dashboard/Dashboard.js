@@ -94,47 +94,7 @@ class Dashboard extends Component {
 			
 			</Row>
 
-      <Particles
-       params={{
-        "particles": {
-            "number": {
-                "value": 160,
-                "density": {
-                    "enable": true
-                }
-            },
-            "size": {
-                "value": 2,
-                "random": true
-            },
-            "move": {
-
-                "random": true,
-	            "speed": 0.7,
-	            "direction": "top",
-	            "out_mode": "out"
-
-            },
-            "line_linked": {
-                "enable": false
-            }
-        },
-        // "interactivity": {
-        //     "events": {
-        //         "onhover": {
-        //             "enable": true,
-        //             "mode": "push"
-        //         }
-        //     },
-        //     "modes": {
-        //       "push": {
-        //         "particles_nb": 10
-        //     }
-        //     }
-        // }
-    }} 
-      
-      />
+  
       
       </div>
     );

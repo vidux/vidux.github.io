@@ -1,7 +1,11 @@
 import React, { Component, Suspense } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import * as router from 'react-router-dom';
-import { Container } from 'reactstrap';
+import Particles from 'react-particles-js';
+import {
+  Container, NavItem,
+  NavLink
+} from 'reactstrap';
 
 import {
   AppAside,
@@ -12,7 +16,8 @@ import {
   AppSidebarForm,
   AppSidebarHeader,
   AppSidebarMinimizer,
- 
+
+
   AppBreadcrumb2 as AppBreadcrumb,
   AppSidebarNav2 as AppSidebarNav,
 } from '@coreui/react';
@@ -38,17 +43,25 @@ class DefaultLayout extends Component {
     return (
       <div className="app">
         <AppHeader fixed>
-          <Suspense  fallback={this.loading()}>
-            <DefaultHeader onLogout={e=>this.signOut(e)}/>
+          <Suspense fallback={this.loading()}>
+            <DefaultHeader onLogout={e => this.signOut(e)} />
           </Suspense>
         </AppHeader>
         <div className="app-body">
-        <AppSidebar fixed  offCanvas>
-            
-   
+          <AppSidebar fixed offCanvas>
+
+            <NavItem>
+              <NavLink
+                onClick={() => {
+                  this.props.history.push('/nasaimage')
+                }}>
+                Today Nasa Image
+              </NavLink>
+            </NavItem>
           </AppSidebar>
+
           <main className="main">
-            <AppBreadcrumb appRoutes={routes} router={router}/>
+            <AppBreadcrumb appRoutes={routes} router={router} />
             <Container fluid>
               <Suspense fallback={this.loading()}>
                 <Switch>
@@ -68,6 +81,47 @@ class DefaultLayout extends Component {
                 </Switch>
               </Suspense>
             </Container>
+            <Particles
+              params={{
+                "particles": {
+                  "number": {
+                    "value": 160,
+                    "density": {
+                      "enable": true
+                    }
+                  },
+                  "size": {
+                    "value": 2,
+                    "random": true
+                  },
+                  "move": {
+
+                    "random": true,
+                    "speed": 0.7,
+                    "direction": "top",
+                    "out_mode": "out"
+
+                  },
+                  "line_linked": {
+                    "enable": false
+                  }
+                },
+                // "interactivity": {
+                //     "events": {
+                //         "onhover": {
+                //             "enable": true,
+                //             "mode": "push"
+                //         }
+                //     },
+                //     "modes": {
+                //       "push": {
+                //         "particles_nb": 10
+                //     }
+                //     }
+                // }
+              }}
+
+            />
           </main>
           <AppAside fixed>
             <Suspense fallback={this.loading()}>

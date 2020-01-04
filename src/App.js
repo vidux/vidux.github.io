@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store, history } from './redux/store';
+
+
 // import { renderRoutes } from 'react-router-config';
 import './App.scss';
 
@@ -15,6 +19,9 @@ class App extends Component {
 
   render() {
     return (
+	  <Provider store={store}>
+           
+        
       <HashRouter>
           <React.Suspense fallback={loading()}>
             <Switch>
@@ -23,6 +30,7 @@ class App extends Component {
             </Switch>
           </React.Suspense>
       </HashRouter>
+	    </Provider>
     );
   }
 }
