@@ -1,0 +1,28 @@
+.abtme_main_content_text{
+    
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    
+}
+.abtme_main_content_text code{
+    color: #bf8943;
+}
+
+
+.abt_content_jmbotron{
+    background-color: #3b5460;
+}
+
+
+.abntme_about_text{
+    font-family: 'Indie Flower', cursive;
+    font-size: 4.5rem;
+    color: #a8ffe2;
+    text-align: center;
+}
+
+.abtme_content_cards{
+   background-color: rgba(84, 97, 121, 0);
+}

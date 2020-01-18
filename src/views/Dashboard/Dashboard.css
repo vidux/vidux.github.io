@@ -1,0 +1,29 @@
+.main_content_text{
+    
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    font-size: 4em;
+    text-align: center;
+}
+
+.db_content_jmbotron{
+    background-color: #3b5460;
+}
+
+.db_center_title_text{
+    font-size: 4.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #a8ffe2;
+}
+
+.db_about_text{
+    font-family: 'Indie Flower', cursive;
+    font-size: 4.5rem;
+    color: #a8ffe2;
+    text-align: center;
+}
+
+.db_content_cards{
+   background-color: rgb(84, 97, 121);
+}
